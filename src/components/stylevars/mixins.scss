@@ -1,0 +1,18 @@
+@import './medias.scss';
+
+@mixin set-input-styles {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 60px;
+  @media ($mobile) {
+    height: 40px;
+  }
+}
+
+
+
+@mixin form-messages {
+  font-size: 1rem;
+  display: none;
+}

@@ -1,0 +1,66 @@
+@import '../stylevars/mixins.scss';
+@import '../stylevars/colors.scss';
+@import '../stylevars/medias.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  @media ($mobile) {
+    width: 300px;
+  }
+}
+
+.form__input {
+  @include set-input-styles;
+  color: $primary-color;
+}
+
+.invalid {
+  outline: 1px solid $error-color;
+}
+
+.invalid_message {
+  display: none;
+}
+
+.invalid + .invalid_message{
+  color: $error-color;
+  font-size: .8rem;
+  display: block;
+}
+
+.form__message {
+  @media ($mobile) {
+    height: 80px;
+  }
+  height: 100px;
+}
+
+.form__submit {
+  @include set-input-styles;
+  background-color: $primary-color;
+  color: $white-color;
+  cursor: pointer;
+}
+
+.form__submit:disabled {
+  background-color: $disabled-color;
+  cursor: auto;
+}
+
+.success-message {
+  @include form-messages;
+  color: $success-color;
+}
+
+.success .success-message,
+.error .error-message {
+  display: block;
+}
+
+.error-message {
+  @include form-messages;
+  color: $error-color;
+}

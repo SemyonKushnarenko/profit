@@ -1,0 +1,18 @@
+@import '/src/components/stylevars/colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $primary-color;
+  font-size: 1.4rem;
+}
+
+body {
+  background-color: $body-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
