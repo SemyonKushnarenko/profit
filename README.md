@@ -4,7 +4,7 @@
 
 Will install all packages
 
-### `npm server`
+### `npm run server`
 
 Will run the json server
 
